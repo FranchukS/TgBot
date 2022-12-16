@@ -32,7 +32,6 @@ def start(message):
     greeting = ("Hi, i'm paper trading bot, pick one trade pair for begin"
                 "(BTCUSDT, BNBUSDT or ETHUSDT)")
     bot.send_message(message.chat.id, greeting, parse_mode="html")
-    print(message.text)
 
 
 @bot.message_handler()
