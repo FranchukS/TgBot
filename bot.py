@@ -37,8 +37,8 @@ def start(message):
 @bot.message_handler()
 def get_user_text(message):
     if message.text in ["BTCUSDT", "BNBUSDT", "ETHUSDT"]:
-        img = get_image(message.text)
-        bot.send_photo(message.chat.id, img)
+        image_url = get_image(message.text)
+        bot.send_photo(message.chat.id, image_url)
     else:
         warning = ("Please choose one of this pairs"
                    "(BTCUSDT, BNBUSDT or ETHUSDT)")
